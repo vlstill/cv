@@ -1,0 +1,127 @@
+%% start of file `template.tex'.
+%% Copyright 2006-2015 Xavier Danaux (xdanaux@gmail.com).
+%
+% This work may be distributed and/or modified under the
+% conditions of the LaTeX Project Public License version 1.3c,
+% available at http://www.latex-project.org/lppl/.
+
+
+\documentclass[11pt,a4paper,roman]{moderncv}        % possible options include font size ('10pt', '11pt' and '12pt'), paper size ('a4paper', 'letterpaper', 'a5paper', 'legalpaper', 'executivepaper' and 'landscape') and font family ('sans' and 'roman')
+
+% moderncv themes
+\moderncvstyle{classic}                             % style options are 'casual' (default), 'classic', 'banking', 'oldstyle' and 'fancy'
+
+\moderncvcolor{green}                               % color options 'black', 'blue' (default), 'burgundy', 'green', 'grey', 'orange', 'purple' and 'red'
+\definecolor{paradisegreen}{HTML}{45A931}
+\colorlet{color1}{paradisegreen!80!black}
+%\renewcommand{\familydefault}{\sfdefault}         % to set the default font; use '\sfdefault' for the default sans serif font, '\rmdefault' for the default roman one, or any tex font name
+%\nopagenumbers{}                                  % uncomment to suppress automatic page numbering for CVs longer than one page
+
+% character encoding
+\usepackage[shorthands=off,english]{babel} % package for multilingual support
+\RequirePackage{fontspec} % UFT8 fonts for LuaLaTeX
+%\usepackage[utf8]{inputenc}                       % if you are not using xelatex ou lualatex, replace by the encoding you are using
+%\usepackage{CJKutf8}                              % if you need to use CJK to typeset your resume in Chinese, Japanese or Korean
+
+% adjust the page margins
+\usepackage[scale=0.75]{geometry}
+%\setlength{\hintscolumnwidth}{3cm}                % if you want to change the width of the column with the dates
+%\setlength{\makecvheadnamewidth}{10cm}            % for the 'classic' style, if you want to force the width allocated to your name and avoid line breaks. be careful though, the length is normally calculated to avoid any overlap with your personal info; use this at your own typographical risks...
+
+% personal data
+\name{Vladimír}{Štill}
+\title{curriculum vit\ae}               % optional, remove the line if not wanted
+\address{Košinovská 438}{582 66 Krucemburk}{Czech Republic} % optional, remove / comment the line if not wanted; the "postcode city" and "country" arguments can be omitted or provided empty
+\phone[mobile]{+420~603~219~242}                   % optional, remove / comment the line if not wanted; the optional "type" of the phone can be "mobile" (default), "fixed" or "fax"
+\email{xstill@mail.muni.cz}                        % optional, remove / comment the line if not wanted
+\catcode`\~=11
+\homepage{paradise.fi.muni.cz/~xstill/}    % optional, remove / comment the line if not wanted
+\catcode`\~=13
+% \social[linkedin]{john.doe}                        % optional, remove / comment the line if not wanted
+% \social[twitter]{jdoe}                             % optional, remove / comment the line if not wanted
+\social[github]{vlstill}                              % optional, remove / comment the line if not wanted
+% \extrainfo{additional information}                 % optional, remove / comment the line if not wanted
+
+\usepackage[ backend=biber
+           , style=numeric
+           , sorting=ydnt
+           , bibencoding=UTF8
+           , maxcitenames=3
+           , maxbibnames=100
+           ]{biblatex}
+\addbibresource{papers.bib}
+
+% \renewbibmacro*{date}{}
+\renewbibmacro*{date+extrayear}{}
+\renewbibmacro*{issue+date}{}
+\newcommand*{\bibyear}{}
+
+\defbibenvironment{bibliography}
+  {\list
+     {\iffieldequals{year}{\bibyear}
+        {}
+        {\printfield{year}%
+         \savefield{year}{\bibyear}}}
+     {\setlength{\topsep}{0pt}% layout parameters based on moderncvstyleclassic.sty
+      \setlength{\labelwidth}{\hintscolumnwidth}%
+      \setlength{\labelsep}{\separatorcolumnwidth}%
+      \setlength{\itemsep}{\bibitemsep}%
+      \leftmargin\labelwidth%
+      \advance\leftmargin\labelsep}%
+      \sloppy\clubpenalty4000\widowpenalty4000}
+  {\endlist}
+  {\item}
+
+\usepackage[plainpages=false,   % get the page numbering correctly
+            pdfpagelabels,      % write arabic labels to all pages
+            unicode,           	% allow unicode characters in links
+            colorlinks=true,    % use colored links instead of boxed
+            linkcolor={color1},
+            urlcolor={color1}
+			]{hyperref}
+
+\usepackage{xspace}
+\newcommand{\divine}{\mbox{\textsf{DIVINE}}\xspace}
+\newcommand{\lart}{\mbox{\textsf{LART}}\xspace}
+\newcommand{\llvm}{\textsf{LLVM}\xspace}
+\newcommand{\ltl}{LTL\xspace}
+\usepackage{enumitem}
+
+\begin{document}
+\makecvtitle
+
+\section{Education}
+\cventry{2013--now}{Masaryk University}{}{Brno, Czech Republic}{}{%
+Field of study: FI PDS Parallel and Distributed Systems\newline{}%
+Master thesis: \textit{\llvm{} Transformations for Model Checking}}
+\cventry{2010--2013}{Masaryk University}{}{Brno, Czech Republic}{}{%
+Field of study: FI PSK Computer Networks and Communication\newline{}%a
+Bachelor thesis: \textit{State space compression for the \divine model checker}}
+
+\section{Work experience}
+\cventry{2012--now}{Parallel \& Distributed Systems Laboratory}{}{Masaryk University, Brno, Czech Republic}{}{active lab member, developer of the \divine model checker}
+\cventry{2011--now}{Masaryk University}{}{Brno, Czech Republic}{}{
+    \begin{description}[font=\itshape]
+        \itemsep0pt
+        \item[IB016 Seminar on Functional Programming] seminar tutor, 2015--now
+        \item[PB173 Domain specific development in C/C++] seminar tutor, 2014--now
+        \item[IB015 Non-inperative Programming] seminar tutor, 2011--now
+        \item[IB102 Automata, Grammars, and Complexity] homework creation, 2012--now; seminar tutor, 2013--2014
+        \item[PB071 Introduction to the C language] seminar tutor, autumn 2012
+    \end{description}
+}
+
+\section{Other experience}
+\cventry{spring 2014}{Norwegian University of Science and Technology}{}{Trondheim, Norway}{}{Erasmus stay for one semester}
+
+\section{Language skills}
+\cvlanguage{Czech}{native language}{}
+\cvlanguage{English}{fluent}{}
+
+\nocite{*}
+\printbibliography[title={Publications}]
+
+\end{document}
+
+
+%% end of file `template.tex'.
