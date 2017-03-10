@@ -7,6 +7,7 @@
 
 
 \documentclass[11pt,a4paper,roman]{moderncv}        % possible options include font size ('10pt', '11pt' and '12pt'), paper size ('a4paper', 'letterpaper', 'a5paper', 'legalpaper', 'executivepaper' and 'landscape') and font family ('sans' and 'roman')
+\input{defs}
 
 % moderncv themes
 \moderncvstyle{classic}                             % style options are 'casual' (default), 'classic', 'banking', 'oldstyle' and 'fancy'
@@ -31,8 +32,8 @@
 % personal data
 \name{Vladimír}{Štill}
 \title{curriculum vit\ae}               % optional, remove the line if not wanted
-\address{Černého 11}{635 00 Brno -- Bystrc}{Czech Republic} % optional, remove / comment the line if not wanted; the "postcode city" and "country" arguments can be omitted or provided empty
-\phone[mobile]{+420~603~219~242}                   % optional, remove / comment the line if not wanted; the optional "type" of the phone can be "mobile" (default), "fixed" or "fax"
+\address{\mystreet}{635 00 Brno -- Bystrc}{Czech Republic} % optional, remove / comment the line if not wanted; the "postcode city" and "country" arguments can be omitted or provided empty
+\phone[mobile]{\myphone}                   % optional, remove / comment the line if not wanted; the optional "type" of the phone can be "mobile" (default), "fixed" or "fax"
 \email{xstill@mail.muni.cz}                        % optional, remove / comment the line if not wanted
 \catcode`\~=11
 \homepage{paradise.fi.muni.cz/~xstill/}    % optional, remove / comment the line if not wanted
