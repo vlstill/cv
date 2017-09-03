@@ -25,7 +25,7 @@
 %\usepackage{CJKutf8}                              % if you need to use CJK to typeset your resume in Chinese, Japanese or Korean
 
 % adjust the page margins
-\usepackage[scale=0.75]{geometry}
+\usepackage[scale=0.7]{geometry}
 %\setlength{\hintscolumnwidth}{3cm}                % if you want to change the width of the column with the dates
 %\setlength{\makecvheadnamewidth}{10cm}            % for the 'classic' style, if you want to force the width allocated to your name and avoid line breaks. be careful though, the length is normally calculated to avoid any overlap with your personal info; use this at your own typographical risks...
 
@@ -50,6 +50,14 @@
            , maxcitenames=3
            , maxbibnames=100
            ]{biblatex}
+\DeclareSourcemap{
+    \maps[datatype=bibtex, overwrite]{
+        \map{
+            \step[fieldset=editor, null]
+            \step[fieldset=language, null]
+        }
+    }
+}
 \addbibresource{papers.bib}
 
 % \renewbibmacro*{date}{}
@@ -69,7 +77,7 @@
       \setlength{\itemsep}{\bibitemsep}%
       \leftmargin\labelwidth%
       \advance\leftmargin\labelsep}%
-      \sloppy\clubpenalty4000\widowpenalty4000}
+      \emergencystretch 3em\clubpenalty4000\widowpenalty4000}
   {\endlist}
   {\item}
 
@@ -94,7 +102,7 @@
 \section{Education}
 \cventry{2016--now}{Masaryk University}{}{Brno, Czech Republic}{}{%
 Field of Study: FI PST Computer Systems and Technologies\newline{}%
-Ph.D. research topic: \emph{Formal Verification of C/C++ Programs}}
+PhD research topic: \emph{Memory-Model-Aware Analysis of Parallel Programs}}
 \cventry{2013--2016}{Masaryk University}{}{Brno, Czech Republic}{}{%
 Field of study: FI PDS Parallel and Distributed Systems\newline{}%
 Master thesis: \textit{\llvm{} Transformations for Model Checking}}
@@ -108,15 +116,17 @@ since 2016 also in cooperation with Red Hat Czech Republic}
 \cventry{2011--now}{Masaryk University}{}{Brno, Czech Republic}{}{
     \begin{description}[font=\itshape]
         \itemsep0pt
-        \item[IB016 Seminar on Functional Programming] seminar tutor, 2015--now
-        \item[PB173 Domain specific development in C/C++] seminar tutor, 2014--now
-        \item[IB015 Non-inperative Programming] seminar tutor, 2011--now
+        \item[PV264 Advanced Programming in C++] seminar tutor and lecture material co-author, 2017--now
+        \item[IB016 Seminar on Functional Programming] seminar tutor and lecture material co-author, 2015--now
+        \item[IB015 Non-inperative Programming] homework creation, 2014--now; seminar tutor, 2011--2016
         \item[IB102 Automata, Grammars, and Complexity] homework creation, 2012--now; seminar tutor, 2013--2014
+        \item[PB173 Domain specific development in C/C++] seminar tutor, 2014--2016
         \item[PB071 Introduction to the C language] seminar tutor, autumn 2012
     \end{description}
 }
 
 \section{Other experience}
+\cventry{2014--now}{Nordic Animals Association}{}{Masaryk University}{}{member of the community helping with organization of educational and entertainment activities for pre-university and university students}
 \cventry{spring 2014}{Norwegian University of Science and Technology}{}{Trondheim, Norway}{}{Erasmus stay for one semester}
 
 \section{Language skills}
