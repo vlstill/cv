@@ -1,8 +1,13 @@
 
 all : cv.pdf
 
-%.pdf : %.tex papers.bib
-	-biber $(<:.tex=)
+%.pdf : %.tex %.bbl
+	lualatex $(<:.tex=) < /dev/null
+
+%.bbl : %.bcf papers.bib
+	biber $(<:.tex=)
+
+%.bcf : %.tex
 	lualatex $(<:.tex=) < /dev/null
 
 watch :

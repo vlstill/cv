@@ -35,9 +35,7 @@
 \address{\mystreet}{635 00 Brno -- Bystrc}{Czech Republic} % optional, remove / comment the line if not wanted; the "postcode city" and "country" arguments can be omitted or provided empty
 \phone[mobile]{\myphone}                   % optional, remove / comment the line if not wanted; the optional "type" of the phone can be "mobile" (default), "fixed" or "fax"
 \email{xstill@mail.muni.cz}                        % optional, remove / comment the line if not wanted
-\catcode`\~=11
-\homepage{paradise.fi.muni.cz/~xstill/}    % optional, remove / comment the line if not wanted
-\catcode`\~=13
+\homepage{vstill.eu}    % optional, remove / comment the line if not wanted
 % \social[linkedin]{john.doe}                        % optional, remove / comment the line if not wanted
 % \social[twitter]{jdoe}                             % optional, remove / comment the line if not wanted
 \social[github]{vlstill}                              % optional, remove / comment the line if not wanted
@@ -90,7 +88,7 @@
 			]{hyperref}
 
 \usepackage{xspace}
-\newcommand{\divine}{\mbox{\textsf{DIVINE}}\xspace}
+\newcommand{\divine}{\mbox{DIVINE}\xspace}
 \newcommand{\lart}{\mbox{\textsf{LART}}\xspace}
 \newcommand{\llvm}{\textsf{LLVM}\xspace}
 \newcommand{\ltl}{LTL\xspace}
@@ -101,37 +99,93 @@
 
 \section{Education}
 \cventry{2016--now}{Masaryk University}{}{Brno, Czech Republic}{}{%
-Field of Study: FI PST Computer Systems and Technologies\newline{}%
-PhD research topic: \emph{Memory-Model-Aware Analysis of Parallel Programs}}
+PhD research topic: \emph{Analysis of Parallel C++ Programs}%
+\newline{}%
+Field of Study: FI PST Computer Systems and Technologies%
+}
+\cventry{2018}{Masaryk University}{}{Brno, Czech Republic}{}{%
+Advanced Master's state examination (RNDr.)%
+\newline{}%
+Thesis: \textit{Memory-Model-Aware Analysis of Parallel Programs}%
+}
 \cventry{2013--2016}{Masaryk University}{}{Brno, Czech Republic}{}{%
-Field of study: FI PDS Parallel and Distributed Systems\newline{}%
-Master thesis: \textit{\llvm{} Transformations for Model Checking}}
+Master thesis: \textit{\llvm{} Transformations for Model Checking}%
+\newline{}%
+Field of study: FI PDS Parallel and Distributed Systems%
+}
 \cventry{2010--2013}{Masaryk University}{}{Brno, Czech Republic}{}{%
-Field of study: FI PSK Computer Networks and Communication\newline{}%a
-Bachelor thesis: \textit{State space compression for the \divine model checker}}
+Bachelor thesis: \textit{State space compression for the \divine model checker}%
+\newline{}%
+Field of study: FI PSK Computer Networks and Communication%
+}
 
 \section{Work experience}
-\cventry{2012--now}{Parallel \& Distributed Systems Laboratory}{}{Masaryk University, Brno, Czech Republic}{}{active lab member, developer of the \divine model checker,
-since 2016 also in cooperation with Red Hat Czech Republic}
-\cventry{2011--now}{Masaryk University}{}{Brno, Czech Republic}{}{
+\cventry{2012--now}{Parallel \& Distributed Systems Laboratory}{}{Masaryk University, Brno, Czech Republic}{\emph{Research}}{
+Active lab member, developer of the \divine model checker,
+since 2016 also in cooperation with Red Hat Czech Republic.
+}
+\cventry{2011--now}{Masaryk University}{}{Brno, Czech Republic}{\emph{Teaching}}{
     \begin{description}[font=\itshape]
-        \itemsep0pt
-        \item[PV264 Advanced Programming in C++] seminar tutor and lecture material co-author, 2017--now
-        \item[IB016 Seminar on Functional Programming] seminar tutor and lecture material co-author, 2015--now
-        \item[IB015 Non-inperative Programming] homework creation, 2014--now; seminar tutor, 2011--2016
-        \item[IB102 Automata, Grammars, and Complexity] homework creation, 2012--now; seminar tutor, 2013--2014
-        \item[PB173 Domain specific development in C/C++] seminar tutor, 2014--2016
-        \item[PB071 Introduction to the C language] seminar tutor, autumn 2012
+        \item[IB015 Non-inperative Programming] head of the team responsible for homework creation and automatic grading, 2014--now; seminar tutor, 2011--2016.
+        \item[PV264 Advanced Programming in C++] seminar tutor, homework creator, and lecture material co-author, 2017--now.
+        \item[PB161 C++ Programming] lecturer of the first three lectures, 2020.
+        \item[IB005 Formal Languages and Automata] head of the team responsible for homework creation, 2020.
+        \item[IB016 Seminar on Functional Programming] seminar tutor and lecture material co-author, 2015--2019.
+        \item[IB102 Automata, Grammars, and Complexity] homework creation and grading, 2012; head of the team responsible for homework creation and grading 2013--2019; seminar tutor, 2013--2014.
+        \item[PB173 Domain specific development in C/C++] seminar tutor for the topic of Modern C++, 2014--2016.
+        \item[PB071 Introduction to the C language] seminar tutor, autumn 2012.
     \end{description}
+}
+\cventry{2015--now}{Masaryk University}{}{Brno, Czech Republic}{}{
+    Chairman of the Students' Chamber of the Academic Senate of Faculty of Informatics.
+    \newline{}
+    Member of the Dean's Board.
+}
+\cventry{2018--now}{Masaryk University}{}{Brno, Czech Republic}{}{
+    Member of the Students' Chamber of the Academic Senate of Masaryk University.
+    \newline{}
+    Member of the Doctoral Studies Committee of the Academic Senate of Masaryk University.
+}
+
+\section{Selected Software Projects}
+\cventry{2012--now}{\divine}{}{}{\emph{Developer \& Researcher}}{
+    A software model checker developed in the ParaDiSe Laboratory, written mostly in C++.
+}
+\cventry{2014--now}{hsExprTest}{}{}{\emph{Lead Developer}}{
+    A framework for automatic testing of students' assignment using
+    questionares or submission folders in IS MU and a tool for checking of
+    Haskell assignments against teacher-provided solutions or tests.
+    \begin{itemize}
+        \item Since 2014 used in IB015 Non-Imperative Programming
+        \item Since 2018 used in IB002 Algorithms and data structures I
+        \item In 2018 used in IB113 Introduction to Programming and Algorithms
+        \item Since 2019 used in IB111 Foundations of Programming
+        \item Since 2020 used in IB005 Formal Languages and Automata
+        \item Since 2020 used in IB016 Seminar on Functional Programming
+    \end{itemize}
+    The generic framework is written in Python (with previous versions in C++
+    and Haskell), the Haskell support is written mainly in Haskell.
+    Support for courses other then IB015 and IB016 was provided by teachers of
+    the given courses.
 }
 
 \section{Other experience}
-\cventry{2014--now}{Nordic Animals Association}{}{Masaryk University}{}{member of the community helping with organization of educational and entertainment activities for pre-university and university students}
-\cventry{spring 2014}{Norwegian University of Science and Technology}{}{Trondheim, Norway}{}{Erasmus stay for one semester}
+
+\cventry{2019--now}{Instruktoři Brno}{}{}{}{
+\textcolor{red}{TODO}
+}
+\cventry{2014--now}{Nordic Animals Association}{}{Masaryk University}{}{
+Member of the community helping with organization of educational and entertainment activities for pre-university and university students.
+}
+\cventry{spring 2014}{Norwegian University of Science and Technology}{}{Trondheim, Norway}{}{
+Erasmus stay for one semester.
+}
 
 \section{Language skills}
 \cvlanguage{Czech}{native language}{}
 \cvlanguage{English}{fluent}{}
+%\cvlanguage{German}{basics}{}
+%\cvlanguage{Norwegian}{basics}{}
 
 \nocite{*}
 \printbibliography[title={Publications}]
