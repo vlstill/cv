@@ -11,6 +11,7 @@
 
 % moderncv themes
 \moderncvstyle{classic}                             % style options are 'casual' (default), 'classic', 'banking', 'oldstyle' and 'fancy'
+\cfoot{\thepage}
 
 \moderncvcolor{green}                               % color options 'black', 'blue' (default), 'burgundy', 'green', 'grey', 'orange', 'purple' and 'red'
 \definecolor{paradisegreen}{HTML}{45A931}
@@ -81,11 +82,11 @@
 
 \usepackage[plainpages=false,   % get the page numbering correctly
             pdfpagelabels,      % write arabic labels to all pages
-            unicode,           	% allow unicode characters in links
+            unicode,               % allow unicode characters in links
             colorlinks=true,    % use colored links instead of boxed
             linkcolor={color1},
             urlcolor={color1}
-			]{hyperref}
+            ]{hyperref}
 
 \usepackage{xspace}
 \newcommand{\divine}{\mbox{DIVINE}\xspace}
@@ -119,23 +120,46 @@ Bachelor thesis: \textit{State space compression for the \divine model checker}%
 Field of study: FI PSK Computer Networks and Communication%
 }
 
-\section{Work experience}
-\cventry{2012--now}{Parallel \& Distributed Systems Laboratory}{}{Masaryk University, Brno, Czech Republic}{\emph{Research}}{
-Active lab member, developer of the \divine model checker,
-since 2016 also in cooperation with Red Hat Czech Republic.
-}
-\cventry{2011--now}{Masaryk University}{}{Brno, Czech Republic}{\emph{Teaching}}{
-    \begin{description}[font=\itshape]
-        \item[IB015 Non-inperative Programming] head of the team responsible for homework creation and automatic grading, 2014--now; seminar tutor, 2011--2016.
-        \item[PV264 Advanced Programming in C++] seminar tutor, homework creator, and lecture material co-author, 2017--now.
-        \item[PB161 C++ Programming] lecturer of the first three lectures, 2020.
+\section{Teaching Experience}
+\cventry{2011--now}{Masaryk University}{}{Brno, Czech Republic}{}{}
+    % beware of nasty hack here to allow page breaks inside the description -- the description is not in the enumitem
+    \begingroup\small
+    \begin{description}[font=\itshape, topsep=0pt,
+                        leftmargin=\hintscolumnwidth+\separatorcolumnwidth+\labelwidth+2\labelsep,
+                        labelindent=\hintscolumnwidth+\separatorcolumnwidth]
+        \item[IB015 Non-inperative Programming] head of the team responsible for homework creation and automatic grading, 2014--now; help with preparation and grading of final exams, 2016--now; seminar tutor, 2011--2016; occasionally substitute lecturer.
+
+            In 2014 I was part of the team which re-designed the course seminars and created materials and homework for them with support of MU project MUNI\slash FR\slash 0181\slash 2014.
+
+            In 2019 I was part of the team which re-designed the course once more due to changes in the FI study programmes.
+
+        \item[PV264 Advanced Programming in C++] seminar tutor, homework creator, and lecture and seminar material co-author, 2017--now.
+
+            In 2016 I was part of the team which created materials for this course with the support of MU project MUNI\slash FR\slash 1540\slash 2015.
+
+        \item[PB161 C++ Programming] lecturer of the first three lectures, 2020; occasionally substitute lecturer in earlier years.
+
         \item[IB005 Formal Languages and Automata] head of the team responsible for homework creation, 2020.
+
         \item[IB016 Seminar on Functional Programming] seminar tutor and lecture material co-author, 2015--2019.
-        \item[IB102 Automata, Grammars, and Complexity] homework creation and grading, 2012; head of the team responsible for homework creation and grading 2013--2019; seminar tutor, 2013--2014.
-        \item[PB173 Domain specific development in C/C++] seminar tutor for the topic of Modern C++, 2014--2016.
-        \item[PB071 Introduction to the C language] seminar tutor, autumn 2012.
+
+            In 2016 I was part of the team which re-designed this course with the help of MU project MUNI\slash FR\slash 1656\slash 2014
+
+        \item[IB102 Automata, Grammars, and Complexity] homework creation and grading, 2012; head of the team responsible for homework creation and grading, 2013--2019; seminar tutor, 2013--2014.
+
+        \item[PB173 Domain specific development in C/C++] seminar tutor for the topic of Modern C++, 2014--2016.\\
+            I was part of the team which created this topic for PB173. This later lead to creation of PV264.
+
+        \item[PB071 Introduction to the C language] seminar tutor in autumn 2012.
     \end{description}
+    \endgroup
+
+\section{Research \& Other Work Experience}
+\cventry{2012--now}{Parallel \& Distributed Systems Laboratory}{}{Masaryk University, Brno, Czech Republic}{}{
+Active lab member, developer of the \divine model checker.
+My PhD work on the \divine model checker is in part supported by Red Hat Czech Republic.
 }
+
 \cventry{2015--now}{Masaryk University}{}{Brno, Czech Republic}{}{
     Chairman of the Students' Chamber of the Academic Senate of Faculty of Informatics.
     \newline{}
@@ -148,9 +172,6 @@ since 2016 also in cooperation with Red Hat Czech Republic.
 }
 
 \section{Selected Software Projects}
-\cventry{2012--now}{\divine}{}{}{\emph{Developer \& Researcher}}{
-    A software model checker developed in the ParaDiSe Laboratory, written mostly in C++.
-}
 \cventry{2014--now}{hsExprTest}{}{}{\emph{Lead Developer}}{
     A framework for automatic testing of students' assignment using
     questionares or submission folders in IS MU and a tool for checking of
@@ -168,12 +189,15 @@ since 2016 also in cooperation with Red Hat Czech Republic.
     Support for courses other then IB015 and IB016 was provided by teachers of
     the given courses.
 }
-
-\section{Other experience}
-
-\cventry{2019--now}{Instruktoři Brno}{}{}{}{
-\textcolor{red}{TODO}
+\cventry{2012--now}{\divine}{}{}{\emph{Developer \& Researcher}}{
+    A software model checker developed in the ParaDiSe Laboratory, written mostly in C++.
 }
+
+\section{Other Experience}
+
+% \cventry{2019--now}{Instruktoři Brno}{}{}{}{
+% \textcolor{red}{TODO}
+% }
 \cventry{2014--now}{Nordic Animals Association}{}{Masaryk University}{}{
 Member of the community helping with organization of educational and entertainment activities for pre-university and university students.
 }
@@ -181,11 +205,18 @@ Member of the community helping with organization of educational and entertainme
 Erasmus stay for one semester.
 }
 
-\section{Language skills}
+\section{Language Skills}
 \cvlanguage{Czech}{native language}{}
 \cvlanguage{English}{fluent}{}
 %\cvlanguage{German}{basics}{}
 %\cvlanguage{Norwegian}{basics}{}
+
+
+\section{Programming Language Skills}
+
+\cvlanguage{C++}{advanced knowledge}{}
+\cvlanguage{Haskell, Python, C}{very good knowledge}{}
+\cvlanguage{Perl, Prolog, C\#}{average knowledge}{}
 
 \nocite{*}
 \printbibliography[title={Publications}]
