@@ -12,3 +12,6 @@ all : cv.pdf
 
 watch :
 	while true; do inotifywait -e close_write,moved_to,create .; sleep 1; make; done
+
+.PRECIOUS: %.bcf %.bbl
+.PHONY: all watch
