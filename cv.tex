@@ -11,7 +11,6 @@
 
 % moderncv themes
 \moderncvstyle{classic}                             % style options are 'casual' (default), 'classic', 'banking', 'oldstyle' and 'fancy'
-\cfoot{\thepage}
 
 \moderncvcolor{green}                               % color options 'black', 'blue' (default), 'burgundy', 'green', 'grey', 'orange', 'purple' and 'red'
 \definecolor{paradisegreen}{HTML}{45A931}
@@ -26,7 +25,7 @@
 %\usepackage{CJKutf8}                              % if you need to use CJK to typeset your resume in Chinese, Japanese or Korean
 
 % adjust the page margins
-\usepackage[scale=0.7]{geometry}
+\usepackage[scale=0.72]{geometry}
 %\setlength{\hintscolumnwidth}{3cm}                % if you want to change the width of the column with the dates
 %\setlength{\makecvheadnamewidth}{10cm}            % for the 'classic' style, if you want to force the width allocated to your name and avoid line breaks. be careful though, the length is normally calculated to avoid any overlap with your personal info; use this at your own typographical risks...
 
@@ -35,7 +34,7 @@
 \title{curriculum vit\ae}               % optional, remove the line if not wanted
 \address{\mystreet}{635 00 Brno-Bystrc}{Czech Republic} % optional, remove / comment the line if not wanted; the "postcode city" and "country" arguments can be omitted or provided empty
 \phone[mobile]{\myphone}                   % optional, remove / comment the line if not wanted; the optional "type" of the phone can be "mobile" (default), "fixed" or "fax"
-\email{xstill@mail.muni.cz}                        % optional, remove / comment the line if not wanted
+\email{dev.link@vstill.eu}                        % optional, remove / comment the line if not wanted
 \homepage{vstill.eu}    % optional, remove / comment the line if not wanted
 % \social[linkedin]{john.doe}                        % optional, remove / comment the line if not wanted
 % \social[twitter]{jdoe}                             % optional, remove / comment the line if not wanted
@@ -124,6 +123,60 @@ Field of study: FI PSK Computer Networks and Communication%
 \cventry{2020--now}{Masaryk University}{}{Brno, Czech Republic}{}{
 	Lecturer in programming at Faculty of Informatics (full-time).
 }
+\cventry{2016–2020}{Masaryk University}{}{Brno, Czech Republic}{}{
+        PhD Researcher in the topic of \emph{Analysis of Parallel C++ Programs}, supported in part by Red Hat Czech Republic.
+}
+%\cventry{2011–2020}{Masaryk University}{}{Brno, Czech Republic}{}{
+%        Teaching assistant (part-time tutor).
+%}
+
+\section{Research}
+\cventry{2012--2020}{Parallel \& Distributed Systems Laboratory}{}{Masaryk University, Brno, Czech Republic}{}{
+Active lab member, developer of the \divine model checker.
+My PhD work on \divine was in part supported by Red Hat Czech Republic.
+My main topic was verification of parallel C and C++ programs, including research in handling advanced language features such as exceptions, analysis of relaxed memory models, and parallel program termination.\\[\smallskipamount]
+I was participating in the following grants:
+\begin{itemize}[itemsep=0pt, topsep=\smallskipamount]
+  \item Czech Science Foundation (GAČR) grants GA18-02177S, GA15-08772S, GA P202\slash{}11\slash{}0312,
+  \item Technology Agency of the Czech Republic (TAČR) grant TH04010192,
+  \item Grants of the FI Dean's Programme in 2013–2015.
+  %: MUNI\slash{}33\slash{}05\slash{}2013, MUNI\slash{}33\slash{}13\slash{}2014, and MUNI\slash{}33\slash{}15\slash{}2015.
+\end{itemize}
+}
+
+\section{Other Work Experience}
+\cventry{2015--2020}{Masaryk University}{}{Brno, Czech Republic}{}{
+    Chairman of the Students' Chamber of the Academic Senate of Faculty of Informatics.
+    \newline{}
+    Member of the Dean's Board.
+}
+\cventry{2018--2020}{Masaryk University}{}{Brno, Czech Republic}{}{
+    Member of the Students' Chamber of the Academic Senate of Masaryk University.
+    \newline{}
+    Member of the Doctoral Studies Committee of the Academic Senate of Masaryk University.
+}
+
+\section{Selected Software Projects}
+\cventry{2012--2020}{\divine}{}{}{\emph{Developer \& Researcher}}{
+    A software model checker developed in the ParaDiSe Laboratory, written mostly in C++.\\
+}
+\cventry{2014--now}{hsExprTest}{}{}{\emph{Lead Developer}}{
+    A framework for automatic testing of students' assignment using
+    questionnaires or submission folders in Information System of Masaryk University and a tool for checking of
+    Haskell assignments against teacher-provided solutions or tests.
+    \begin{itemize}
+        \item Since 2014 used in IB015 Non-Imperative Programming
+        \item Since 2018 used in IB002 Algorithms and data structures I
+        \item In 2018 used in IB113 Introduction to Programming and Algorithms
+        \item Since 2019 used in IB111 Foundations of Programming
+        \item Since 2020 used in IB005 Formal Languages and Automata
+        \item Since 2020 used in IB016 Seminar on Functional Programming
+    \end{itemize}
+    The generic framework is written in Python (with previous versions in C++
+    and Haskell), the Haskell support is written mainly in Haskell.
+    Support for courses other then IB015 and IB016 was provided by teachers of
+    the given courses.
+}
 
 \section{Teaching Experience}
 \cventry{2011--now}{Masaryk University}{}{Brno, Czech Republic}{}{}
@@ -172,53 +225,6 @@ Field of study: FI PSK Computer Networks and Communication%
         \item[PB071 Introduction to the C language] seminar tutor in autumn 2012.
     \end{description}
     \endgroup
-
-\section{Research}
-\cventry{2012--2020}{Parallel \& Distributed Systems Laboratory}{}{Masaryk University, Brno, Czech Republic}{}{
-Active lab member, developer of the \divine model checker.
-My PhD work on the \divine model checker is in part supported by Red Hat Czech Republic.
-My research is concerned with the topic of verification of parallel C and C++ programs.\\[\smallskipamount]
-I was participating in the following grants:
-\begin{itemize}[itemsep=0pt, topsep=\smallskipamount]
-  \item GAČR grants GA18-02177S, GA15-08772S, GA P202\slash{}11\slash{}0312,
-  \item TAČR grant TH04010192,
-  \item Grants of the FI Dean's Programme: MUNI\slash{}33\slash{}05\slash{}2013, MUNI\slash{}33\slash{}13\slash{}2014, and MUNI\slash{}33\slash{}15\slash{}2015.
-\end{itemize}
-}
-
-\section{Other Work Experience}
-\cventry{2015--2020}{Masaryk University}{}{Brno, Czech Republic}{}{
-    Chairman of the Students' Chamber of the Academic Senate of Faculty of Informatics.
-    \newline{}
-    Member of the Dean's Board.
-}
-\cventry{2018--2020}{Masaryk University}{}{Brno, Czech Republic}{}{
-    Member of the Students' Chamber of the Academic Senate of Masaryk University.
-    \newline{}
-    Member of the Doctoral Studies Committee of the Academic Senate of Masaryk University.
-}
-
-\section{Selected Software Projects}
-\cventry{2012--2020}{\divine}{}{}{\emph{Developer \& Researcher}}{
-    A software model checker developed in the ParaDiSe Laboratory, written mostly in C++.\\
-}
-\cventry{2014--now}{hsExprTest}{}{}{\emph{Lead Developer}}{
-    A framework for automatic testing of students' assignment using
-    questionnaires or submission folders in IS MU and a tool for checking of
-    Haskell assignments against teacher-provided solutions or tests.
-    \begin{itemize}
-        \item Since 2014 used in IB015 Non-Imperative Programming
-        \item Since 2018 used in IB002 Algorithms and data structures I
-        \item In 2018 used in IB113 Introduction to Programming and Algorithms
-        \item Since 2019 used in IB111 Foundations of Programming
-        \item Since 2020 used in IB005 Formal Languages and Automata
-        \item Since 2020 used in IB016 Seminar on Functional Programming
-    \end{itemize}
-    The generic framework is written in Python (with previous versions in C++
-    and Haskell), the Haskell support is written mainly in Haskell.
-    Support for courses other then IB015 and IB016 was provided by teachers of
-    the given courses.
-}
 
 \section{Other Experience}
 
